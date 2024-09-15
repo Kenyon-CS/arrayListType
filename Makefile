@@ -1,14 +1,14 @@
 # Compiler
-CXX = g++
+CXX = clang++
 
 # Compiler flags
 CXXFLAGS = -std=c++11 -Wall -g
 
 # Target executable
-TARGET = function_pointer
+TARGET = testArrayType
 
 # Source files
-SRCS = main.cpp
+SRCS = testProg.cpp
 
 # Object files (derived from source files)
 OBJS = $(SRCS:.cpp=.o)
@@ -21,7 +21,7 @@ $(TARGET): $(OBJS)
 	$(CXX) $(CXXFLAGS) -o $(TARGET) $(OBJS)
 
 # Rule to compile the source files into object files
-%.o: %.cpp
+%.o: %.cpp %.h
 	$(CXX) $(CXXFLAGS) -c $< -o $@
 
 # Clean up generated files
