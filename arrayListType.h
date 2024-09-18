@@ -72,7 +72,7 @@ public:
       //    displayed.
 
     //elemType& operator [](int location) ; 
-template <class elemType>
+
 elemType& operator [](int location) 
 {
     if (location < 0 || location >= length)
