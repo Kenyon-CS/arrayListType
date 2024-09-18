@@ -70,17 +70,10 @@ public:
       //Postcondition: retItem = list[location]
       //    If location is out of range, an appropriate message is
       //    displayed.
-
-    //elemType& operator [](int location) ; 
-
-elemType& operator [](int location) 
-{
-        return list[location];
-} //end []      //Function to retrieve the element from the list at the
+    elemType& operator [](int location) { return list[location]; }
+      //Function to retrieve the element from the list at the
       //position specified by location using the {} operator.
-      //Postcondition: retItem = list[location]
-      //    If location is out of range, an appropriate message is
-      //    displayed.
+      //This is not a safe operation, as if the element does not exist, it will crash
     void replaceAt(int location, const elemType& repItem);
       //Function to replace the elements in the list at the
       //position specified by location. The item to be replaced
