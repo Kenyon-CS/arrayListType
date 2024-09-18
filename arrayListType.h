@@ -71,7 +71,7 @@ public:
       //    If location is out of range, an appropriate message is
       //    displayed.
 
-    elemType& operator [](int location) ; 
+    //elemType& operator [](int location) ; 
 template <class elemType>
 elemType& operator [](int location) 
 {
