@@ -228,7 +228,7 @@ void arrayListType<elemType>::retrieveAt
     else
         retItem = list[location];
 } //end retrieveAt
-template <class elemType>
+//template <class elemType>
 elemType& operator [](int location) 
 {
     if (location < 0 || location >= length)
