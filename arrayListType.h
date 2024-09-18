@@ -64,14 +64,14 @@ public:
       //Postcondition: The list element at list[location] is removed
       //    and length is decremented by 1. If location is out of
       //    range,an appropriate message is displayed.
-    void retrieveAt(int location, elemType& retItem) ;
+    void retrieveAt(int location, elemType& retItem) const;
       //Function to retrieve the element from the list at the
       //position specified by location.
       //Postcondition: retItem = list[location]
       //    If location is out of range, an appropriate message is
       //    displayed.
 
-    elemType& operator [](int location) const; 
+    elemType& operator [](int location) ; 
       //Function to retrieve the element from the list at the
       //position specified by location using the {} operator.
       //Postcondition: retItem = list[location]
