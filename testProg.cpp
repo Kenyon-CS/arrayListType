@@ -27,6 +27,12 @@ int main()                                                //Line 5
         intList.insertAt(counter, number);                //Line 14
     }                                                     //Line 15
 
+    for (int counter = 0; counter < 5; counter++)         
+    {                                                    
+        cout << intList[counter] << " ";              
+    }    
+    cout << endl;
+    
     cout << endl;                                         //Line 16
     cout<<"List 19: The list you entered is: ";           //Line 17
     intList.print();                                      //Line 18
