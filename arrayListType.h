@@ -70,6 +70,13 @@ public:
       //Postcondition: retItem = list[location]
       //    If location is out of range, an appropriate message is
       //    displayed.
+
+    elemType operator [](int location) const; 
+      //Function to retrieve the element from the list at the
+      //position specified by location using the {} operator.
+      //Postcondition: retItem = list[location]
+      //    If location is out of range, an appropriate message is
+      //    displayed.
     void replaceAt(int location, const elemType& repItem);
       //Function to replace the elements in the list at the
       //position specified by location. The item to be replaced
@@ -221,8 +228,15 @@ void arrayListType<elemType>::retrieveAt
     else
         retItem = list[location];
 } //end retrieveAt
-
-
+template <class elemType>
+elemType operator [](int location) const
+{
+    if (location < 0 || location >= length)
+        cerr << "The location of the item to be retrieved is "
+             << "out of range." << endl;
+    else
+        return list[location];
+} //end []
 template <class elemType>
 void arrayListType<elemType>::replaceAt
                           (int location, const elemType& repItem)
