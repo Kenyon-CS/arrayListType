@@ -71,7 +71,7 @@ public:
       //    If location is out of range, an appropriate message is
       //    displayed.
 
-    elemType operator [](int location) const; 
+    elemType& operator [](int location) const; 
       //Function to retrieve the element from the list at the
       //position specified by location using the {} operator.
       //Postcondition: retItem = list[location]
