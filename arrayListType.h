@@ -64,7 +64,7 @@ public:
       //Postcondition: The list element at list[location] is removed
       //    and length is decremented by 1. If location is out of
       //    range,an appropriate message is displayed.
-    void retrieveAt(int location, elemType& retItem) const;
+    void retrieveAt(int location, elemType& retItem) ;
       //Function to retrieve the element from the list at the
       //position specified by location.
       //Postcondition: retItem = list[location]
@@ -229,7 +229,7 @@ void arrayListType<elemType>::retrieveAt
         retItem = list[location];
 } //end retrieveAt
 template <class elemType>
-elemType operator [](int location) const
+elemType operator [](int location) 
 {
     if (location < 0 || location >= length)
         cerr << "The location of the item to be retrieved is "
