@@ -75,9 +75,10 @@ public:
 
 elemType& operator [](int location) 
 {
-    if (location < 0 || location >= length)
+    if (location < 0 || location >= length) {
         cerr << "The location of the item to be retrieved is "
              << "out of range." << endl;
+        return 0; }
     else
         return list[location];
 } //end []      //Function to retrieve the element from the list at the
