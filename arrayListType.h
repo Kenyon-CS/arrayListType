@@ -78,7 +78,7 @@ elemType& operator [](int location)
     if (location < 0 || location >= length) {
         cerr << "The location of the item to be retrieved is "
              << "out of range." << endl;
-        elemType t;
+        elemType t = new elemType;
         return t; }
     else
         return list[location];
